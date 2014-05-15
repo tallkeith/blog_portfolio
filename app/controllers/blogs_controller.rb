@@ -1,6 +1,9 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
 
+
+  include BlogPostsHelper
+
   # GET /blogs
   # GET /blogs.json
   def index
@@ -10,6 +13,17 @@ class BlogsController < ApplicationController
   # GET /blogs/1
   # GET /blogs/1.json
   def show
+  end
+
+  def mass_update_post_count
+
+    blogs = Blog.all
+
+    blogs.each do |blog|
+
+      update_post_count(blog.id)
+    end
+
   end
 
   # GET /blogs/new
