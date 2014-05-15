@@ -1,11 +1,12 @@
-<h1>Listing blog_posts</h1>
+<h1>My Blog</h1>
 
 <table>
   <thead>
     <tr>
       <th>Subject</th>
       <th>Post</th>
-      <th>Num comments</th>
+      <th>Number of comments</th>
+      <th>Blog ID</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,6 +17,7 @@
         <td><%= blog_post.subject %></td>
         <td><%= blog_post.post %></td>
         <td><%= blog_post.num_comments %></td>
+        <td><%= blog_post.blog_id %></td>
         <td><%= link_to 'Show', blog_post %></td>
         <td><%= link_to 'Edit', edit_blog_post_path(blog_post) %></td>
         <td><%= link_to 'Destroy', blog_post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
