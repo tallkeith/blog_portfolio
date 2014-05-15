@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+
+  root 'blogs#home'
+
+
+
+
+
+
+
   resources :comments
 
   resources :blog_posts
